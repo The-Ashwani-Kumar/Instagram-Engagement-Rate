@@ -37,22 +37,7 @@
             <% }else{ %>
             <h5>Engagement Rate Average: <%= output.engagement_rate_avg %>%</h5>
             <br>
-            <div class="row">
-                <% output.images.forEach(function(image) { %>
-                <div class="col-sm-3 mb-3">
-                    <a href="<%= image.link %>" target="_blank" class="image">
-                        <i class="fas fa-<%= image.type === 'GraphVideo' ? 'video' : 'image' %>"></i>
-                        <img src="<%= image.thumbnail %>" alt="<%= image.caption %>" title="<%= image.caption %>"
-                             class="img-fluid">
-                    </a>
-                    <div class="row meta">
-                        <div class="col-4"><i class="fas fa-star"></i> <%= image.engagement_rate %>%</div>
-                        <div class="col-4"><i class="fas fa-heart"></i> <%= image.like %></div>
-                        <div class="col-4"><i class="fas fa-comment"></i> <%= image.comments %></div>
-                    </div>
-                </div>
-                <% }); %>
-            </div>
+            
             <% } %>
         </div>
         <% } %>
